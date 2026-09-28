@@ -1,0 +1,24 @@
+{
+  "name": "exerlayer-backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev --local",
+    "deploy": "wrangler deploy",
+    "db:create": "wrangler d1 create exerlayer-db",
+    "db:migrate": "wrangler d1 execute exerlayer-db --file=./src/db/schema.sql",
+    "db:migrate:local": "wrangler d1 execute exerlayer-db --local --file=./src/db/schema.sql",
+    "types": "wrangler types"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.110.8",
+    "hono": "^4.12.0",
+    "viem": "^2.27.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260714.0",
+    "@types/node": "^26.1.1",
+    "typescript": "^5.7.0",
+    "wrangler": "^4.0.0"
+  }
+}

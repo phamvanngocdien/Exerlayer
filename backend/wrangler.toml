@@ -1,0 +1,23 @@
+name = "exerlayer-backend"
+main = "src/index.ts"
+compatibility_date = "2026-07-20"
+
+[triggers]
+crons = [
+  "*/1 * * * *",
+  "0 9 * * *",
+  "0 */6 * * *"
+]
+
+[vars]
+ARC_RPC_URL = "https://rpc.testnet.arc.network"
+INVOICE_CONTRACT = ""
+ROUTER_CONTRACT = ""
+CIRCLE_API_KEY = ""
+SUPABASE_URL = ""
+SUPABASE_ANON_KEY = ""
+SUPABASE_SERVICE_ROLE_KEY = ""
+
+[ai]
+binding = "AI"
+remote = true
