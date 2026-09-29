@@ -1,7 +1,10 @@
 import { arcTestnet } from '../wallet/config';
 
+const envAppId = process.env.NEXT_PUBLIC_PRIVY_APP_ID;
+const isValidFormat = Boolean(envAppId && envAppId.startsWith('c') && envAppId.length >= 20);
+
 export const privyConfig = {
-  appId: process.env.NEXT_PUBLIC_PRIVY_APP_ID || 'cm00000000000000000000000',
+  appId: isValidFormat ? (envAppId as string) : 'cms1nlwri001z0ckswg4ms1t4',
   config: {
     loginMethods: ['email', 'wallet'] as ('email' | 'wallet')[],
     appearance: {

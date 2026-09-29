@@ -49,7 +49,7 @@ jobs:
         working-directory: frontend
         run: npm run build
         env:
-          NEXT_PUBLIC_PRIVY_APP_ID: test
+          NEXT_PUBLIC_PRIVY_APP_ID: cms1nlwri001z0ckswg4ms1t4
 
   backend:
     name: Backend (Cloudflare & Supabase)
